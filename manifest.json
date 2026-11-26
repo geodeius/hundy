@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Hundy",
+  "version": "0.1.0",
+  "description": "Block the social media sites you choose.",
+  "permissions": ["storage", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": ["*://*.x.com/*", "*://*.twitter.com/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html" },
+  "web_accessible_resources": [{
+    "resources": ["blocked.html"],
+    "matches": ["<all_urls>"]
+  }]
+}
